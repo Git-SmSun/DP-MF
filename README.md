@@ -12,5 +12,9 @@ In addition, we provide some parameter settings：
      If you want to use normal distribution to initialize the feature marices P and Q，comment out Equation (1) and uncomment Equation (2). If you want to use uniform distribution，comment out Equation (2) and uncomment Equation (1).
      *ptr = (mf_float)(distribution(generator) * scale); (1)
      *ptr = (mf_float)(dist(generator)); (2)
-  2. We provide the Adam and Adadelta methods . 
-  
+  2. We provide Adam and Adadelta optimizers in function MFSolver::sg_update().
+
+We also provide some other functions such as：
+  1. calc_spar(): save the sparsity of latent vectors to files.
+  2. save_model(): this function can save intermediate models to file during training.
+  3. calc_per(): calculate the percentage of elements within the threshold interval.
